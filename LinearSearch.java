@@ -1,23 +1,35 @@
-package searching_algo;
+package practise;
 import java.util.*;
-public class LinearSearch {
-	public static void main(String args[]){
-		  Scanner sc = new Scanner(System.in);
-	      int array[] = {10, 40, 50, 87, 45, 67, 45};
-	      int size = array.length;
-	      int value = 45;
-	      int num = -1;
+public class main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);		
+		
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		int found = 0;
+		
+		for(int i=0; i<n; i++) {
+			a[i]=sc.nextInt();
+		}
+		int x = sc.nextInt();
+		
+		for(int i=0; i<n; i++) {
+			if(a[i]==x) {
+				found = i;
+				break;
+			}
+			else if(a[i]!=x){
+				found = -1;
+			}
+		}
+		if(found>=0) {
+			System.out.println("FOUND at " + found);
+		}else {
+			System.out.println("NOT FOUND");
+		}
+		
 
-	      for (int i=0 ;i< size; i++){
-	         if(array[i]==value){
-	            num = i;
-	            break;
-	         }
-	      }
-	      if(num>=0) {
-	    	  System.out.println("FOUND ON INDEX " + num);
-	      }else {
-	    	  System.out.println("NOT FOUND");
-	      }
-	 }
+		sc.close();
+		
+	}
 }
