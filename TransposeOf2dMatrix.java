@@ -2,8 +2,7 @@ package practise;
 import java.util.Scanner;
 public class TransposeOfMatrix {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);		
 		
 		int rows = sc.nextInt();
 		int cols = sc.nextInt();
@@ -28,8 +27,7 @@ public class TransposeOfMatrix {
 			}
 			System.out.println();
 		}
-		
-		
+				
 		sc.close();
 		
 	}
