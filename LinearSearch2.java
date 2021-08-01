@@ -1,4 +1,4 @@
-package practise;
+package searching_algo;
 public class LinearSearch2 {
 	public static void main(String[] args) {
 		
