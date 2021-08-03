@@ -56,6 +56,5 @@ public class MergeSort {
 			a[k]=b[k];
 		}
 		return a;
-	}	
-	
+	}		
 }
