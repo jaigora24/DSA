@@ -30,7 +30,6 @@ public class selection_sort{
         System.out.println("Sorted array");
         for(int e:a){
             System.out.print(e+" ");
-        }
-        
+        }       
     }
 }
