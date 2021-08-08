@@ -13,7 +13,5 @@ public class ReverseString {
 			revStr = revStr + arr[i];
 		}
 		System.out.print(revStr);
-
 	}
-
 }
