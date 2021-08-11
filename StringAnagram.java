@@ -1,6 +1,6 @@
 package practise;
 import java.util.*;
-public class StringsAnagram {
+public class StringAnagram {
 	
 	public static void main(String[] args) {
 		
