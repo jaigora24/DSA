@@ -12,7 +12,7 @@ public class StringAnagram {
 		else {
 			System.out.println("NOT ANAGRAM");
 		}
-    }
+        }
 	
 	public static boolean anagram(String a, String b) {
 		boolean isAnagram = false;
