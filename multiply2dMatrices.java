@@ -3,8 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class multiply2dMatrices {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);		
 		
 		int rowsA = sc.nextInt();
 		int colsA = sc.nextInt();
@@ -45,7 +44,6 @@ public class multiply2dMatrices {
 				System.out.println();
 			}
 		}
-		sc.close();
-		
+		sc.close();		
 	}
 }
