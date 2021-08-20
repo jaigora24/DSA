@@ -1,7 +1,6 @@
 package string;
 
 import java.util.Arrays;
-
 public class ReverseString {
 
 	public static void main(String[] args) {
