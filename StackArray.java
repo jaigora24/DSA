@@ -1,6 +1,6 @@
 package practise;
 import java.util.*;
-public class main {
+public class StackArray {
 	Scanner sc = new Scanner(System.in);
 	
 	int size = 5;
@@ -43,9 +43,8 @@ public class main {
 	}
 	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		main myStack = new main();
+		StackArray myStack = new StackArray();
 				
 		myStack.push(10);
 		myStack.push(20);
@@ -61,9 +60,6 @@ public class main {
 		myStack.pop();
 		myStack.pop();
 		System.out.println();
-		myStack.show();
-
-		sc.close();
-		
+		myStack.show();		
 	}
 }
