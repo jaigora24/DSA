@@ -1,5 +1,4 @@
 package sorting_algo;
-
 public class InsertionSort {
 
 	public static void main(String[] args) {
@@ -22,5 +21,4 @@ public class InsertionSort {
 		}
 		return a;
 	}
-
 }
