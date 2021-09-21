@@ -1,6 +1,5 @@
 package sorting_algo;
 public class InsertionSort {
-
 	public static void main(String[] args) {
 		
 		int arr[] = insertionSort(new int[] {34,6,78,34,87,98,56,98,5,8,9,1,0,-76,-54,-65,999});
