@@ -1,7 +1,6 @@
 package searching_algo;
 public class BinarySearch {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 		int arr[] = {1,2,3,4,5,6,7,8,9,10};
 		int find = 89;
 		System.out.println(binarySearch(arr,find));
