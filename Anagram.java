@@ -1,7 +1,6 @@
 package practise;
 public class main {	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 		String s1 = "aba";
 		String s2 = "bba";
 		System.out.println(anagram(s1, s2));		
