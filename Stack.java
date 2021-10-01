@@ -1,5 +1,4 @@
 package ds.Stack;
-
 public class Stack {
 	
 	private int maxSize;
@@ -37,6 +36,5 @@ public class Stack {
 	}
 	public boolean isEmpty() {
 		return (top==-1);
-	}
-	
+	}	
 }
