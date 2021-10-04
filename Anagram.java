@@ -4,8 +4,7 @@ public class main {
 		String s1 = "aba";
 		String s2 = "bba";
 		System.out.println(anagram(s1, s2));		
-	}
-	
+	}	
 	public static boolean anagram(String a, String b) {
 		boolean isAnagram = false;
 		boolean visited[] = new boolean[b.length()];
