@@ -10,7 +10,6 @@ public class BinarySearchWithUI {
 		}
 		int find = sc.nextInt();
 		System.out.println(binarySearch(arr,find));
-		sc.close();
 	}
 	public static int binarySearch(int [] a, int k) {
 		int min = 0;
