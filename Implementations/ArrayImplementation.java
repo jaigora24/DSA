@@ -55,7 +55,6 @@ public class ArrayImplementation{
 		//print after deleting
 		for(int i=0; i<n-1; i++){
 			System.out.print(b[i]+" ");
-		}
-		
+		}		
 	}
 }
