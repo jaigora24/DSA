@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class SinglyLinkedListImplementation{
 	static class Node{
 		int data;
