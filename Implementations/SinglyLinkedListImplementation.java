@@ -125,7 +125,6 @@ public class SinglyLinkedListImplementation{
 	
 	
 	
-	
 	//print data of the Linked List
 	public void print(){
 		Node temp=head;
