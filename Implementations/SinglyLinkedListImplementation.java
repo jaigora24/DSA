@@ -27,8 +27,7 @@ public class SinglyLinkedListImplementation{
 			if(head==null){
 				head=new_node;
 			}
-			else{
-				
+			else{	
 				System.out.println("Press 1 to insert data at beginning \n Press 2 to insert data at end \n Press 3 to insert data at specific location");
 				System.out.println("Enter your choice : ");
 				int choice = sc.nextInt();
