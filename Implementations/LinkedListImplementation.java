@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SinglyLinkedListImplementation{
+public class LinkedListImplementation{
 	static class Node{
 		int data;
 		Node next;
@@ -64,9 +64,6 @@ public class SinglyLinkedListImplementation{
 		while(n==1);
 	}
 	
-	
-	
-	
 	//delete data from the Linked List
 	public void deletion(){
 		Scanner sc = new Scanner(System.in);
@@ -118,10 +115,6 @@ public class SinglyLinkedListImplementation{
 		}
 		while(n==1);
 	}
-	
-	
-	
-	
 	
 	//print data of the Linked List
 	public void print(){
