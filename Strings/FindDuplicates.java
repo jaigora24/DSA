@@ -1,21 +1,21 @@
 import java.util.Scanner;
-public class FindDuplicates{
-	public static void findDuplicates(String str){
+public class main{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		String str = sc.nextLine();
+		boolean visited[] = new boolean[str.length()];
 		
 		for(int i=0; i<str.length(); i++){
 			for(int j=i+1; j<str.length(); j++){
-				if(str.charAt(i)==str.charAt(j)){
+				if(str.charAt(i)==str.charAt(j) && !visited[j]){
 					if(str.charAt(i)==' '){
 						continue;
 					}
-					System.out.print(str.charAt(j)+" ");
+					visited[j]=true;
+					System.out.print(str.charAt(i)+" ");
 				}
 			}
 		}
-	}
-	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);		
-		String s = sc.nextLine();	
-		findDuplicates(s);	
 	}
 }
