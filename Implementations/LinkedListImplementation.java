@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class LinkedListImplementation{
+public class LinkedList{
 	static class Node{
 		int data;
 		Node next;
@@ -10,117 +10,113 @@ public class LinkedListImplementation{
 		}
 	}
 	
+	
+	
 	Node head = null;
-	int n=0;
 	
 	
-	//insert data in the Linked List
-	public void insertion(){
-		Scanner sc = new Scanner(System.in);
-		
-		do{
-			System.out.println("Enter Data : ");
-			int data = sc.nextInt();
-			Node new_node = new Node(data);
-			Node temp = head;
-			
-			if(head==null){
-				head=new_node;
-			}
-			else{	
-				System.out.println("Press 1 to insert data at beginning \n Press 2 to insert data at end \n Press 3 to insert data at specific location");
-				System.out.println("Enter your choice : ");
-				int choice = sc.nextInt();
-				switch(choice){
-					case(1):
-						new_node.next=head;
-						head=new_node;
-						break;
-					case(2):
-						temp=head;
-						while(temp.next!=null){
-							temp=temp.next;
-						}
-						temp.next=new_node;
-						new_node.next=null;
-						break;
-					case(3):
-						System.out.println("Enter the position : ");
-						int position = sc.nextInt();
-						temp=head;
-						for(int i=1; i<position-1; i++){
-							temp=temp.next;
-						}
-						new_node.next=temp.next;
-						temp.next=new_node;
-						break;
-				}
-
-				
-			}
-			System.out.println("Press 1 if you want to add more data");
-			n=sc.nextInt();
+	
+	public void insertAtBegin(int data){
+		Node new_node = new Node(data);
+		Node temp = head;
+		if(head==null){
+			head=new_node;
 		}
-		while(n==1);
+		else{
+			new_node.next=head;
+			head=new_node;
+		}
 	}
 	
-	//delete data from the Linked List
-	public void deletion(){
-		Scanner sc = new Scanner(System.in);
+	
+	
+	public void insertAtLast(int data){
+		Node new_node = new Node(data);
 		Node temp = head;
 		
-		do{
-			if(head==null){
-				System.out.println("Linked List is Empty");
-			}
-			else{
-				System.out.println("1. Beginning     2. Ending     3. Specific");
-				System.out.println("Enter your choice : ");
-				int choice = sc.nextInt();
-				
-				switch(choice){
-					case(1):
-						temp = head;
-						temp=temp.next;
-						head=temp;
-						break;
-					
-					case(2):
-						temp = head;
-						Node ptr = temp.next;
-						while(ptr.next!=null){
-							temp=ptr;
-							ptr=ptr.next;
-						}
-						temp.next=null;
-						break;
-					
-					case(3):
-						System.out.println("Enter the location where you want to add : ");
-						int loc = sc.nextInt();
-						
-						temp=head;
-						ptr=temp.next;
-						for(int i=1; i<loc-1; i++){
-							temp=ptr;
-							ptr=ptr.next;
-						}
-						temp.next=ptr.next;
-						break;
-					
-				}
-			}
-			System.out.println("Press 1. if you want to delete more data");
-			n = sc.nextInt();
+		if(head==null){
+			head=new_node;
 		}
-		while(n==1);
+		else{
+			while(temp.next!=null){
+				temp=temp.next;
+			}
+			temp.next=new_node;
+			new_node.next=null;
+		}
 	}
 	
-	//print data of the Linked List
-	public void print(){
-		Node temp=head;
+	
+	
+	public void insertAtSpecific(int data, int pos){
+		Node new_node= new Node(data);
+		Node temp = head;
 		if(head==null){
-			System.out.println("Linked List doesn't exist");
+			new_node=head;
+		}
+		else{
+			for(int i=1; i<pos-1; i++){
+				temp=temp.next;
+			}
+			new_node.next=temp.next;
+			temp.next=new_node;
+		}
+	}
+		
+		
+	
+	public void deleteAtBegin(){
+		Node temp = head;
+		
+		if(head==null){
+			System.out.println("Linked List is empty");
+		}
+		else{
+			temp=temp.next;
+			head=temp;
+		}
+	}
+	
+	
+	
+	public void deleteAtLast(){
+		Node temp = head;
+		Node ptr = temp.next;
+		if(head==null){
+			System.out.println("Linked List doesn't exists");
+		}
+		else{
+			while(ptr.next!=null){
+				temp=ptr;
+				ptr=ptr.next;
+			}
+			temp.next=null;
+		}
+	}
+	
+	
+	
+	public void deleteAtSpecific(int pos){
+		Node temp = head;
+		Node ptr = temp.next;
+		if(head==null){
+			System.out.println("Linked List doesn't exists");
+		}
+		else{
+			for(int i=1; i<pos-1; i++){
+				temp=ptr;
+				ptr=ptr.next;
+			}
+			temp.next=ptr.next;
+		}
+	}
+	
+	
+	
+	public void print(){
+		Node temp = head;
+		if(head==null){
+			System.out.println("Linked List doesn't exists");
 		}
 		else{
 			while(temp!=null){
@@ -130,11 +126,21 @@ public class LinkedListImplementation{
 		}
 	}
 	
+	
+	
 	public static void main(String[] args){
+		LinkedList ll = new LinkedList();
+		ll.insertAtBegin(10);
+		ll.insertAtBegin(20);
+		ll.insertAtBegin(30);
+		ll.insertAtLast(40);
+		ll.insertAtLast(50);
+		ll.insertAtSpecific(60,3);
+		ll.insertAtSpecific(70,3);
+		ll.deleteAtBegin();
+		ll.deleteAtLast();
+		ll.deleteAtSpecific(3);
 		
-		SinglyLinkedListImplementation ll = new SinglyLinkedListImplementation();
-		ll.insertion();
-		ll.deletion();
 		ll.print();
 	}
 }
