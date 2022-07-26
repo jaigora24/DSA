@@ -3,53 +3,55 @@ public class StackUsingLinkedLIst{
 	static class Node{
 		int data;
 		Node next;
+		
 		Node(int data){
 			this.data=data;
 			this.next=null;
 		}
 	}
-	Node top = null;
-	
+	Node head = null;
 	public void push(int data){
 		Node new_node = new Node(data);
-		if(top==null){
-			top=new_node;
+		if(head==null){
+			head=new_node;
 		}
 		else{
-			new_node.next=top;
-			top=new_node;
+			new_node.next=head;
+			head=new_node;
 		}
 	}
+	
 	public void pop(){
-		if(top==null){
-			System.out.println("Stack is Empty");
+		Node temp = head;
+		if(head==null){
+			System.out.println("STACK IS EMPTY");
 		}
 		else{
-			top=top.next;
+			temp=temp.next;
+			head=temp;
 		}
 	}
+	
 	public void peek(){
-		if(top==null){
-			System.out.println("Stack is empty");
+		if(head==null){
+			System.out.println("STACK IS EMPTY");
 		}
 		else{
-			System.out.println(top.data);
+			System.out.println(head.data);
 		}
 	}
-		
 	
 	public static void main(String[] args){
 		StackUsingLinkedLIst mystack = new StackUsingLinkedLIst();
+		
 		mystack.push(10);
 		mystack.push(20);
 		mystack.push(30);
 		mystack.push(40);
-		mystack.peek();
-		mystack.pop();
-		mystack.peek();
-		mystack.pop();
-		mystack.peek();
 		mystack.push(50);
+		mystack.pop();
+		mystack.peek();
+		mystack.push(60);
 		mystack.peek();
 	}
-}	
+}
