@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SwapCase{
+public class main{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		
@@ -7,18 +7,16 @@ public class SwapCase{
 		String temp = "";
 		
 		for(int i=0; i<str.length(); i++){
-			
-			char c = str.charAt(i);
-			if(Character.isUpperCase(c)){
-				c = Character.toLowerCase(c);
+			char c;
+			if(Character.isLowerCase(str.charAt(i))){
+				c=Character.toUpperCase(str.charAt(i));
 				temp+=c;
 			}
-			else if(str.charAt(i)==' '){
-				temp+=' ';
+			if(str.charAt(i)==' '){
+				temp+=" ";
 			}
-				
-		    else if(Character.isLowerCase(c)){
-				c = Character.toUpperCase(c);
+			if(Character.isUpperCase(str.charAt(i))){
+				c=Character.toLowerCase(str.charAt(i));
 				temp+=c;
 			}
 		}
